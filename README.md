@@ -4,6 +4,22 @@
 https://www.youtube.com/watch?v=BI6s6dDM6pQ
 ```
 
+* Upload
+```
+https://www.youtube.com/watch?v=rdsc16msEFg
+```
+
+* Icones
+```
+https://react-icons.github.io/react-icons/icons/md/
+```
+
+* Icons Install
+```
+npm install react-icons --save
+```
+
+
 Quando um dev front-end pensa em _busca_, _filtro_, _ordenação_ e _paginação_, provavelmente pensa em usar métodos como `Array.filter()` ou `Array.sort()` diretamente no front. Mas e se tivermos 100, 500, 1000 itens paginados de 10 em 10? Gerenciar isso pelo front é uma tarefa hercúlea - e pior, não muito eficiente.
 
 Neste Mini Projeto, vamos implementar uma API que retorna uma listagem de pedidos. Por mais simples que pareça, essa é uma API poderosa: ela nos permite passar, como _query parameters_, busca textual, filtro, ordenação e paginação. E o melhor de tudo: **todas essas informações ficarão na URL** para fácil compartilhamento!
