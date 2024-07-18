@@ -1,5 +1,5 @@
 # Busca, filtro, ordenação e paginação com Next.js
-> [!TIP]  
+> [!Apis]  
 > Treinamento Seb Soluções.  
 
 * link
