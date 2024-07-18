@@ -7,7 +7,7 @@ interface LayoutProps{
 
 export default function LayoutApp(props: LayoutProps){
     return(
-        <div>
+        <div className="flex">
             <Menu />
             <section className="flex-1 p-5 bg-zinc-50 text-black">
                 {props.children}
