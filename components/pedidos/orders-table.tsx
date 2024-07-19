@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { Badge } from './ui/badge';
+import { Badge } from '../ui/badge';
 import { ChevronsUpDown } from 'lucide-react';
 
 export default function OrdersTable() {

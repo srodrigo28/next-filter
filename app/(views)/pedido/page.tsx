@@ -1,7 +1,7 @@
-import FilterDropdown from '@/components/filter-dropdown';
-import OrdersTable from '@/components/orders-table';
-import Pagination from '@/components/pagination';
-import SearchInput from '@/components/search-input';
+import FilterDropdown from '@/components/pedidos/filter-dropdown';
+import OrdersTable from '@/components/pedidos/orders-table';
+import Pagination from '@/components/pedidos/pagination';
+import SearchInput from '@/components/pedidos/search-input';
 import LayoutApp from '@/components/shared/LayoutApp/page';
 
 import {

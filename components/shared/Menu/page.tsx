@@ -23,7 +23,7 @@ export default function Menu(){
             <ItemMenu icone={FaAndroid} label="Pedidos" url="/pedido" />
             <ItemMenu icone={FaVideo} label="Aulas" url="#" />
             <ItemMenu icone={FaPersonBooth} label="Cadastros" url="/cadastro" />
-            <ItemMenu icone={FaHome} label="Login" url="#" />
+            <ItemMenu icone={FaHome} label="Login" url="/" />
         </div>
     )
 }
