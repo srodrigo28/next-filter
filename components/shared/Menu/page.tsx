@@ -20,9 +20,9 @@ function ItemMenu( props: ItemMenuProps){
 export default function Menu(){
     return(
         <div className="w-62 bg-blue-700 h-screen p-3">
-            <ItemMenu icone={FaAndroid} label="Pedidos" url="#" />
+            <ItemMenu icone={FaAndroid} label="Pedidos" url="/pedido" />
             <ItemMenu icone={FaVideo} label="Aulas" url="#" />
-            <ItemMenu icone={FaPersonBooth} label="Cadastros" url="#" />
+            <ItemMenu icone={FaPersonBooth} label="Cadastros" url="/cadastro" />
             <ItemMenu icone={FaHome} label="Login" url="#" />
         </div>
     )
