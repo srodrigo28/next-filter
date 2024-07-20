@@ -2,6 +2,11 @@
 > [!TIP]  
 > Treinamento Seb Soluções.  
 
+* Responsive
+```
+https://www.youtube.com/watch?v=2Sezwn6Aaw8
+```
+
 * link
 ```
 https://www.youtube.com/watch?v=BI6s6dDM6pQ

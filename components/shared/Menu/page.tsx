@@ -19,7 +19,9 @@ function ItemMenu( props: ItemMenuProps){
 
 export default function Menu(){
     return(
-        <div className="w-62 bg-blue-700 h-screen p-3">
+        // sm:hidden w-48 aparece so mobile devices
+
+        <div className="hidden md:block w-62 bg-blue-700 h-screen p-3 ">
             <ItemMenu icone={FaAndroid} label="Pedidos" url="/pedido" />
             <ItemMenu icone={FaVideo} label="Aulas" url="#" />
             <ItemMenu icone={FaPersonBooth} label="Cadastros" url="/cadastro" />
