@@ -15,6 +15,7 @@ export default function Taxa( props: TaxaProps ){
     const url = "http://localhost:8080/api/taxa"
     const [id, setId] = useState()
     const [parcela, setParcela] = useState("")
+    const [selectParcela, setSelectParcela] = useState("")
     const [valor, setValor] = useState("")
     const [data, setData] = useState([])
 
@@ -133,6 +134,16 @@ export default function Taxa( props: TaxaProps ){
                         >Cancelar</button>
                     </div>
                 </form>
+            </section>
+
+            <section>
+                <select className="p-3 w-40 mb-20 mt-20">
+                    {
+                        data.map((item : TaxaProps ) => (
+                            <option key={item.id} value={item.parcela}>{item.parcela} x</option>
+                        ))
+                    }
+                </select>
             </section>
 
 
