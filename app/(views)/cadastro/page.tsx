@@ -24,6 +24,7 @@ export default function Cadastro( props : ItemCategoriaProps  ){
     useEffect(() => {
         axios.get(url)
         .then(response => setData(response.data))
+        .catch(error => console.error(error))
     }, [data, setData])
 
     const cancelar = (e: any) => {
@@ -35,6 +36,7 @@ export default function Cadastro( props : ItemCategoriaProps  ){
         setBtnEditar("hidden")
     }
 
+    // Cadastrar
     const handleSubmit = (e:any) => {
         e.preventDefault()
         
@@ -63,6 +65,7 @@ export default function Cadastro( props : ItemCategoriaProps  ){
 
     }
 
+    // Deletar
     const handleDelete = (id: any) => {
         if(!window.confirm("Deseja realmente deletar esse cadastro?")) { return false }
 
@@ -70,7 +73,7 @@ export default function Cadastro( props : ItemCategoriaProps  ){
         .then(function (response) {
             console.log(response);
             // handle error
-            alert("Cadastro deletado com sucesso")
+            alert("Deletado com sucesso")
         })
         .catch( function (error) {
             // handle error
@@ -79,6 +82,7 @@ export default function Cadastro( props : ItemCategoriaProps  ){
         })
     }
 
+    // Carregar campos
     const handleEdit = ( id: any, nome: any, descricao: any ) => {
         // alert( "id: " + id + " nome: " + nome + " descricao: " + descricao )
 
@@ -88,11 +92,10 @@ export default function Cadastro( props : ItemCategoriaProps  ){
         setId(id)
         setNome(nome)
         setDescricao(descricao)
-
-        if(!id || !nome || !descricao) { return false }
         
     }
 
+    // Alterar
     const handEditSave = (e: any) => {
         e.preventDefault()
 

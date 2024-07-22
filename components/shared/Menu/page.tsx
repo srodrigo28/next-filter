@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ElementType } from "react";
 import { FaPersonBooth, FaAndroid, FaVideo, FaHome } from "react-icons/fa"
+import { FaPercent } from "react-icons/fa6";
 
 interface ItemMenuProps{
     icone: ElementType
@@ -25,6 +26,7 @@ export default function Menu(){
             <ItemMenu icone={FaAndroid} label="Pedidos" url="/pedido" />
             <ItemMenu icone={FaVideo} label="Aulas" url="#" />
             <ItemMenu icone={FaPersonBooth} label="Cadastros" url="/cadastro" />
+            <ItemMenu icone={FaPercent} label="Taxa" url="/taxa" />
             <ItemMenu icone={FaHome} label="Login" url="/" />
         </div>
     )
