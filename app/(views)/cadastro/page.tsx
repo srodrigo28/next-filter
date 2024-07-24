@@ -1,9 +1,9 @@
 'use client'
 
 import LayoutApp from "@/components/shared/LayoutApp/page";
-import axios from "axios";
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation'; // 1. import useRouter from 'next/navigation
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 interface ItemCategoriaProps{
     id: number,
@@ -13,7 +13,7 @@ interface ItemCategoriaProps{
  
 export default function Cadastro( props : ItemCategoriaProps  ){
     // preparando o redirect
-    const router = useRouter();
+    const router = useRouter(); // 2. Instanciar o router
 
     const url = "http://localhost:8080/api/categoria"
     const [id, setId] = useState();
@@ -69,7 +69,7 @@ export default function Cadastro( props : ItemCategoriaProps  ){
             alert("Erro ao cadastrar " + error.message)
         })
 
-        router.push('/pedido')
+        router.push('/pedido')  // 3. fazer o push urls
     }
 
     // Deletar
@@ -135,6 +135,7 @@ export default function Cadastro( props : ItemCategoriaProps  ){
                 <h1>Cadastro de categoria</h1>
             </div>
 
+            {/* Opcional 4. passo botão push */}
             <button className="p-3 bg-yellow-500" onClick={() => router.push('/pedido')}>Redirect</button>
 
             <section className="">
