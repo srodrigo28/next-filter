@@ -1,4 +1,5 @@
 'use client'
+
 import LayoutApp from "@/components/shared/LayoutApp/page";
 import Title from "@/components/shared/Title/page";
 import axios from "axios";
@@ -22,13 +23,15 @@ export default function Taxa( props: TaxaProps ){
     const [btnEditar, setBtnEditar] = useState("hidden")
     const [btnCadastrar, setBtnCadastrar] = useState("")
 
+    // listados
     useEffect(() => {
         axios.get(url)
        .then(response => setData(response.data))
        .catch(error => console.error(error))
     }, [data, setData])
 
-    const validar = () => {
+    // Cadastro
+    const hadleCadastrar = () => {
         if(!parcela ||!valor){
             alert("Preencha todos os campos!")
             return false
@@ -54,6 +57,7 @@ export default function Taxa( props: TaxaProps ){
         
     }
 
+    // Deletar
     const handleDelete = (id: any) =>{
         if(!window.confirm("Deseja realmente deletar esse cadastro?")) { return false }
        
@@ -70,6 +74,7 @@ export default function Taxa( props: TaxaProps ){
         })
     }
 
+    // Carregar campos
     const handleEdit = (id: any, parcela: any, valor: any) => {
         setBtnCadastrar("hidden")
         setBtnEditar("")
@@ -79,6 +84,7 @@ export default function Taxa( props: TaxaProps ){
         setValor(valor)
     }
 
+    // Salvar alterações
     const handleSave = () => {
         axios.put(url, {
             id,
@@ -121,7 +127,7 @@ export default function Taxa( props: TaxaProps ){
                     />
                     <div className="grup-button flex items-center justify-center text-white">
                         <button 
-                            onClick={validar} type="button" 
+                            onClick={hadleCadastrar} type="button" 
                             className={` ${btnCadastrar} w-28 p-3 m-2 bg-blue-600`}
                         >Inserir</button>
                         <button 
@@ -145,7 +151,6 @@ export default function Taxa( props: TaxaProps ){
                     }
                 </select>
             </section>
-
 
             <table className="w-full">
                 <thead className="bg-green-500">
@@ -178,6 +183,7 @@ export default function Taxa( props: TaxaProps ){
                    }
                 </tbody>
             </table>
+
         </LayoutApp>
     )
 }

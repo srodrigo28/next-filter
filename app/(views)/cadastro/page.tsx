@@ -1,8 +1,6 @@
 'use client'
 import LayoutApp from "@/components/shared/LayoutApp/page";
 import axios from "axios";
-import { revalidatePath } from "next/cache";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface ItemCategoriaProps{
@@ -21,12 +19,14 @@ export default function Cadastro( props : ItemCategoriaProps  ){
     const [btnEditar, setBtnEditar] = useState("hidden")
     const [btnCadastrar, setBtnCadastrar] = useState("")
 
+    // listar todos
     useEffect(() => {
         axios.get(url)
         .then(response => setData(response.data))
         .catch(error => console.error(error))
     }, [data, setData])
 
+    // cancelar e limpar campos
     const cancelar = (e: any) => {
         e.preventDefault()
 
